@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="app">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>Node/Angular Goods</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+    <style>
+        html                    { overflow-y:scroll; }
+        body                    { padding-top:50px; }
+        #todo-list              { margin-bottom:30px; }
+    </style>
+
+    <!-- SPELLS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="https://code.angularjs.org/1.4.2/angular.js"></script>
+<script src="https://code.angularjs.org/1.4.2/angular-route.js"></script>
+    <script src="core.js"></script>
+
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS -->
+<body>
+    
+    
+        <div class="jumbotron text-center">
+            <h1>My test task </span></h1>
+            <div class="col-sm-3 ">
+                <a href="#first">first</a>
+            </div>
+            <div class="col-sm-3 ">
+                <a href="#home">home</a>
+            </div>
+            <div class="col-sm-3 ">
+                <a href="#second">second</a>
+            </div>
+        </div>
+        <div ng-view></div>
+
+</body>
+</html>

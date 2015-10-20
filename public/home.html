@@ -1,0 +1,50 @@
+<html ng-app="app">
+
+<body>
+<div class="container">
+
+
+        
+        
+            <h1> <span class="label label-info">{{ goods.length }}</span></h1>
+            
+        
+
+        <div id="todo-list" class="row">
+            <div class="col-sm-4 ">
+
+                <div class="checkbox" ng-repeat="good in goods">
+                    <label>
+                        <input type="checkbox" ng-click="deleteGood(good._id)" > {{ good.name[$index] }}
+                        <span>
+                        	<form>
+                        		<input type="text"  ng-model="goodUpdate.text[$index]">
+                        		<button type="submit" class="btn btn-primary btn-lg" ng-click="updateGood(good._id)">Update</button>
+                        	</form>
+                        </span>
+                    </label>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- FORM TO CREATE TODOS -->
+        <div id="todo-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+
+                        <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+                        <input type="text" class="form-control input-lg text-center" ng-model="goodName.text">
+                    </div>
+
+                    <!-- createToDo() WILL CREATE NEW TODOS -->
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createGood()">Add</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
